@@ -13,7 +13,16 @@ console.log(removeEWords('Enter the building')); // 'building'
 */
 
 let removeEWords = function(sentence) {
-    // Your code here 
+
+  let arr = sentence.split(" ");
+
+  let newStr = arr.filter(words => {
+    if (words.toLowerCase().includes("e")) {
+      return false;
+    }
+    return true;
+  })
+  return newStr.join(" ");
 };
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
